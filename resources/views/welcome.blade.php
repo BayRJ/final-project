@@ -9,30 +9,10 @@
 
 </head>
 <body>
-    <header>
-        <nav>
 
-            @guest
-                <a href="{{route('show.login')}}">Login</a>
-                <a href="{{route('show.register')}}">Register</a>
-            @endguest
-
-            @auth
-                <span class="border-r-2 pr-2">
-                    Hi there, {{ Auth::user()->name }}
-                </span>
-                <form action="{{route('logout')}}" method="POST" class="m-0">
-                    @csrf
-
-                    <button >Logout</button>
-                </form>
-            @endauth
-
-        </nav>
-    </header>
-    <nav class="bg-zinc-900 px-8 py-4">
+  <nav class="bg-zinc-900 px-8 py-4">
   <div class="flex justify-between items-center">
-    <a href="" class="text-white text-lg font-bold">Brands</a>
+    <a href="" class="text-white text-lg font-bold">Meme</a>
     <div class="hidden md:flex space-x-4">
       <a href="" class="text-white hover:bg-lime-600/20 px-3 py-2 rounded">Home</a>
       <a href="" class="text-white hover:bg-lime-600/20 px-3 py-2 rounded">Service</a>
@@ -41,9 +21,22 @@
     </div>
 
     <div class="hidden md:block">
-      <a href="" class="text-white bg-lime-600 px-4 py-2 rounded">
-        Login
-      </a>
+  
+      @guest
+        <a href="{{route('show.login')}}" class="text-white bg-lime-600 px-4 py-2 rounded">Login</a>
+        <a href="{{route('show.register')}}" class="text-white bg-lime-600 px-4 py-2 rounded">Register</a>
+      @endguest
+
+      @auth
+        <span class="border-r-2 pr-2">
+            Hi there, {{ Auth::user()->name }}
+        </span>
+        <form action="{{route('logout')}}" method="POST" class="m-0">
+            @csrf
+
+            <button >Logout</button>
+        </form>
+      @endauth
     </div>
 
     <div class="md:hidden">
@@ -59,7 +52,7 @@
       <a href="" class="text-white hover:bg-lime-600/20 px-3 py-2 rounded">Service</a>
       <a href="" class="text-white hover:bg-lime-600/20 px-3 py-2 rounded">About</a>
       <a href="" class="text-white hover:bg-lime-600/20 px-3 py-2 rounded">Contact</a>
-      <a href="" class="w-full bg-lime-600 px-4 py-2 rounded">Login</a>
+      <a href="{{route('show.login')}}" class="w-full bg-lime-600 px-4 py-2 rounded">Login</a>
     </div>
   </div>
 
