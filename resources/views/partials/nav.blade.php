@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home Page</title>
-        @vite('resources/css/app.css')
-
-</head>
-<body>
-    <header>
-        <nav>
-
-            @guest
-                <a href="{{route('show.login')}}">Login</a>
-                <a href="{{route('show.register')}}">Register</a>
-            @endguest
-
-            @auth
-                <span class="border-r-2 pr-2">
-                    Hi there, {{ Auth::user()->name }}
-                </span>
-                <form action="{{route('logout')}}" method="POST" class="m-0">
-                    @csrf
-
-                    <button >Logout</button>
-                </form>
-            @endauth
-
-        </nav>
-    </header>
-    <nav class="bg-zinc-900 px-8 py-4">
+<nav class="bg-zinc-900 px-8 py-4">
   <div class="flex justify-between items-center">
     <a href="" class="text-white text-lg font-bold">Brands</a>
     <div class="hidden md:flex space-x-4">
@@ -78,6 +46,3 @@
       }
     });
   </script>
-
-</body>
-</html>
