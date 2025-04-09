@@ -66,7 +66,7 @@ class ProductController extends Controller
         }
 
         //Show the page to edit the item.
-        return view('products.edit', compact('productItem'));
+        return view('products.show', compact('productItem'));
     }
 
     /**

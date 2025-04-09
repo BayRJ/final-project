@@ -40,7 +40,7 @@
                             <td class="px-4 py-3 space-x-2">
                                 <a href="{{ route('products.edit', $item->id) }}"
                                    class="text-yellow-600 font-semibold hover:underline">Edit</a>
-
+                                <a href="{{ route('products.show', $item->id) }}" class="text-green-600 font-semibold hover:underline">View Task</a>
                                 <form action="{{ url('/products/' . $item->id) }}" method="POST" class="inline">
                                     @csrf
                                     @method('DELETE')
