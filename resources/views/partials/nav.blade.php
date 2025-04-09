@@ -1,6 +1,6 @@
   <nav class="bg-zinc-900 px-8 py-4">
   <div class="flex justify-between items-center">
-    <a href="" class="text-white text-lg font-bold">Prdcts</a>
+    <a href="/" class="text-white text-lg font-bold">Prdcts</a>
     <div class="hidden md:flex space-x-4">
       <a href="{{route('products.index')}}" class="text-white hover:bg-lime-600/20 px-3 py-2 rounded">Products</a>
     </div>

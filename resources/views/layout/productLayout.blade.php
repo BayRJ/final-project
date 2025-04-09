@@ -15,7 +15,7 @@
         
     </style>
 </head>
-<body>
+<body class='overflow-x-hidden bg-slate-200'>
     @include('partials.nav')
     @yield('content')
 </body>
